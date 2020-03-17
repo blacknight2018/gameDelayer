@@ -1,0 +1,17 @@
+TCP-Socks5握手(主模块)
+	(Start Server)开启一个TCP并且监听端口
+	(Auth Client)接受请求并且认证
+	(Handle Thread)单独处理每一个客户端
+
+UDP转发
+	*返回监听的端口
+	*(Start UDP Server)开启一个UDP监听端口
+	*(Clean Socket)销毁资源套接字
+	(Transfer Thread)转发线程
+	(Send Queue Thread)处理发送队列
+	(Recv Queue Thread)处理接收队列
+	
+共同
+	*创建TCP套接字
+	*创建UDP套接字
+	*解析域名
